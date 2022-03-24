@@ -1,0 +1,48 @@
+body {
+    width: 100vw;
+    background-color: blanchedalmond;
+}
+/*HEADER*/
+header {
+    width: 100%;
+    height: 67px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #C3CFD9;
+}
+header h1 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 40px;
+    color: #E8833A;
+}
+/*PAGE 1*/
+h4 {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    letter-spacing: 0.04em;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    color: #293845;
+}
+.movies {
+    width: 80%;
+    min-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    gap: 27px 46px;
+    grid-template-columns: repeat(2, auto);
+}
+.movie {
+    background-color: azure;
+}
+.movie img {
+    width: 100%;
+}
