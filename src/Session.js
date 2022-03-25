@@ -2,9 +2,10 @@ import { useState, useEffect } from 'react';
 import { Link, useParams } from "react-router-dom"
 import axios from 'axios';
 
+import Footer from './Footer'
+
 export default function Session() {
     const { idSession } = useParams();
-    console.log(idSession);
     const [session, setSession] = useState("");
 
     useEffect(() => {
@@ -12,9 +13,10 @@ export default function Session() {
 
         request.then(response => {
             setSession(response.data);
-            console.log(response)
         });
     }, []);
+
+    const { posterURL, title } = session;
 
     return (
         session !== ""
@@ -38,6 +40,10 @@ export default function Session() {
                         )
                     })}
                 </div>
+                <Footer 
+                    poster={posterURL}
+                    title={title}
+                />
             </>
             : <p>carregando</p>
     )
