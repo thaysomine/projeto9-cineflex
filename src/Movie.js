@@ -2,15 +2,24 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 
 export default function Movie() {
-    const [movie, setMovie] = useState([]);
+    const [movies, setMovies] = useState([]);
 
     useEffect(() => {
 		const request = axios.get("https://mock-api.driven.com.br/api/v5/cineflex/movies");
 
-		request.then(resposta => {
-			setItems(resposta.data.items);
+		request.then(response => {
+			setMovies(response.data.posterURL);
+
 		});
 	}, []);
+
+    console.log(movies);
+
+	return (
+		<div className="movie">
+			{movies.map(item => <img src={item} />)}
+		</div>
+	);
 
     return (
         <div className="movies">
