@@ -1,6 +1,6 @@
 body {
     width: 100vw;
-    background-color: blanchedalmond;
+    background-color: white;
 }
 /*HEADER*/
 header {
@@ -9,6 +9,8 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+    position: fixed;
+    top: 0;
     background-color: #C3CFD9;
 }
 header h1 {
@@ -27,8 +29,8 @@ h4 {
     line-height: 28px;
     text-align: center;
     letter-spacing: 0.04em;
-    margin-top: 40px;
     margin-bottom: 40px;
+    margin-top: 100px;
     color: #293845;
 }
 .movies {
@@ -40,9 +42,42 @@ h4 {
     gap: 27px 46px;
     grid-template-columns: repeat(2, auto);
 }
-.movie {
-    background-color: azure;
-}
 .movie img {
     width: 100%;
+}
+/*PAGE 2*/
+.sessions {
+    padding-left: 24px;
+    padding-right: 24px;
+}
+.session p {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    letter-spacing: 0.02em;
+    color: #293845;
+}
+.time {
+    display: flex;
+}
+.time-button {
+    width: 83px;
+    height: 43px;
+    background-color: #E8833A;
+    border-radius: 3px;
+    margin-right: 8px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
 }
