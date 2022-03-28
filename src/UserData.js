@@ -9,7 +9,10 @@ export default function UserData(props) {
 
     function getUserInfo(e) {
         e.preventDefault()
-        if(userData.name.length > 0 && userData.cpf.length === 11) {
+        console.log(userData.name.length);
+        console.log(userData.cpf.length);
+        console.log(seatList);
+        if(userData.name.length > 0 && userData.cpf.length === 11 && seatList.length > 0) {
             const infos = {
                 ids : seatList,
                 name: userData.name,
@@ -26,6 +29,8 @@ export default function UserData(props) {
             promisse.catch(() => {
                 console.log("deu ruim")
             });
+        } else {
+            alert("Preencha os dados corretamente.")
         }
     }
 
