@@ -186,6 +186,63 @@ h4 {
     letter-spacing: 0.04em;
     color: #FFFFFF;
 }
+/*SUCCESS PAGE*/ 
+.success-page {
+    padding-left: 29px;
+    padding-right: 29px;
+}
+.success-page h4 {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    letter-spacing: 0.04em;
+    color: #247A6B;
+}
+.success-page h5 {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.04em; 
+    margin-bottom: 5px;
+    color: #293845;    
+}
+.success-page p {
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 26px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.04em;
+    margin-bottom: 40px;
+    color: #293845;
+}
+.tickets {
+    margin-bottom: 40px;
+}
+p.ajust-margin {
+    margin-bottom: 7px;
+}
+.homepage-button {
+    width: 225px;
+    height: 42px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 120px;
+    background: #E8833A;
+    border-radius: 3px;
+
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 0.04em;
+    color: #FFFFFF;
+}
 /*FOOTER*/
 footer {
     display: flex;

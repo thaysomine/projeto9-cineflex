@@ -4,22 +4,24 @@ import { useNavigate} from "react-router-dom";
 
 export default function UserData(props) {
     let navigate = useNavigate();
-    const {seatList, seats} = props
+    const {seatList, seats, time} = props
     const [userData, setUserData] = useState({name:"", cpf:""});
 
     function getUserInfo(e) {
         e.preventDefault()
         if(userData.name.length > 0 && userData.cpf.length === 11) {
-            let seatNum = []
-            seats.seats.map(({ id, name }) => seatList.includes(id) ? seatNum.push(parseInt(name)) : "")
             const infos = {
-                ids : seatNum,
+                ids : seatList,
                 name: userData.name,
                 cpf: userData.cpf
             }
+
             const promisse = axios.post("https://mock-api.driven.com.br/api/v5/cineflex/seats/book-many", infos);
-            promisse.then(() => {     
-                navigate("/success")
+            promisse.then(() => {  
+                let seatNum = []
+                seats.seats.map(({ id, name }) => seatList.includes(id) ? seatNum.push(name) : "")   
+                console.log(seatNum);
+                navigate("/success", { state: {userData, seats, time, seatNum} })
             });
             promisse.catch(() => {
                 console.log("deu ruim")

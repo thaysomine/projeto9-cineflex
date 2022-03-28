@@ -58,7 +58,7 @@ export default function Seats() {
                     <p>Indisponível</p>
                 </div>
             </div>
-            <UserData seatList={seatList} seats={seats}/>
+            <UserData seatList={seatList} seats={seats} time={name}/>
             <Footer poster={movie.posterURL} title={movie.title} day={day.weekday} time={name}/>
         </>
         : <p>carregando</p>
