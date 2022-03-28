@@ -13,6 +13,7 @@ export default function Session() {
 
         request.then(response => {
             setSession(response.data);
+            console.log(response.data)
         });
     }, []);
 
@@ -25,25 +26,23 @@ export default function Session() {
                 <div className='sessions'>
                     {session.days.map(({ weekday, date, id, showtimes }) => {
                         return (
-                            <>
-                                <div className='session' key={id}>
-                                    <p>{weekday} - {date}</p>
-                                </div>
+                            <div className='session' key={id}>
+                                <p>{weekday} - {date}</p>                                
                                 <div className='time'>
                                     {showtimes.map(({ name, id }) => {
+                                        console.log(id)
                                         return (
-                                            <div className='time-button'>{name}</div>
+                                            <Link to={`seats/${id}`} key={id}>
+                                                <div className='time-button'>{name}</div>
+                                            </Link>
                                         )
                                     })}
                                 </div>
-                            </>
+                            </div>                           
                         )
                     })}
                 </div>
-                <Footer 
-                    poster={posterURL}
-                    title={title}
-                />
+                <Footer poster={posterURL} title={title} />
             </>
             : <p>carregando</p>
     )

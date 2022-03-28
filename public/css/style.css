@@ -1,4 +1,5 @@
 body {
+    font-family: 'Roboto';
     width: 100vw;
     background-color: white;
 }
@@ -14,8 +15,7 @@ header {
     left: 0;
     background-color: #C3CFD9;
 }
-header h1 {
-    font-family: 'Roboto';
+header h1 { 
     font-style: normal;
     font-weight: 400;
     font-size: 34px;
@@ -24,7 +24,6 @@ header h1 {
 }
 /*PAGE 1*/
 h4 {
-    font-family: 'Roboto';
     font-weight: 400;
     font-size: 24px;
     line-height: 28px;
@@ -53,7 +52,6 @@ h4 {
     padding-bottom: 120px;
 }
 .session p {
-    font-family: 'Roboto';
     font-weight: 400;
     font-size: 20px;
     line-height: 23px;
@@ -72,8 +70,6 @@ h4 {
     margin-top: 24px;
     margin-bottom: 24px;
 
-    font-family: 'Roboto';
-    font-style: normal;
     font-weight: 400;
     font-size: 18px;
     line-height: 21px;
@@ -81,6 +77,110 @@ h4 {
     align-items: center;
     justify-content: center;
     letter-spacing: 0.02em;
+    color: #FFFFFF;
+}
+/*SEATS*/
+.seats {
+    max-width: 386px;
+    display: grid;
+    gap: 15px 0px;
+    grid-template-columns: repeat(10, auto);
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.seat-types {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 16px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 40px;
+
+}
+.seat-type {
+    display: flex;
+    flex-direction: column;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 15px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.013em;
+    color: #4E5A65;
+}
+.seat-type p {
+    margin-top: 7px;
+}
+.seat {
+    width: 26px;
+    height: 26px; 
+    background: #C3CFD9;
+    border: 1px solid #808F9D;
+    box-sizing: border-box;
+    border-radius: 12px;
+
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 0.04em;
+    color: #000000;
+}
+.yellow {
+    background-color: #FBE192;
+    border: 1px solid #F7C52B;
+}
+.selected {
+    background: #8DD7CF;
+    border: 1px solid #45BDB0;
+}
+/*USER DATA*/
+.user-data p {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    margin-left: 24px;
+    margin-bottom: 5px;
+    color: #293845;
+}
+.user-data input {
+    width: 327px;
+    height: 51px;
+    margin-left: 24px;
+    margin-bottom: 7px;
+    background: #FFFFFF;
+    border: 1px solid #D5D5D5;
+    box-sizing: border-box;
+    border-radius: 3px;
+
+    font-style: italic;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    color: #AFAFAF;
+}
+.book-seat {
+    width: 225px;
+    height: 42px;  
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 57px;
+    margin-bottom: 150px;
+    background: #E8833A;
+    border-radius: 3px; 
+    
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 0.04em;
     color: #FFFFFF;
 }
 /*FOOTER*/
@@ -113,7 +213,6 @@ footer {
     height: 72px;
 }
 footer p {
-    font-family: 'Roboto';
     font-weight: 400;
     font-size: 26px;
     line-height: 30px;

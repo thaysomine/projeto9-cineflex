@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from './Header';
 import Movies from './Movies';
 import Session from './Session';
+import Seats from './Seats';
 
 function App() {
     return (
@@ -12,6 +13,7 @@ function App() {
             <Routes>
                 <Route path="/" element={<Movies />} />
                 <Route path="/session/:idSession" element={<Session />} />
+                <Route path="/seats/:idSeats" element={<Seats />} />
             </Routes>
         </BrowserRouter>
     );
