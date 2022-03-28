@@ -32,7 +32,7 @@ export default function Session() {
                                     {showtimes.map(({ name, id }) => {
                                         console.log(id)
                                         return (
-                                            <Link to={`seats/${id}`} key={id}>
+                                            <Link to={`/seats/${id}`} key={id}>
                                                 <div className='time-button'>{name}</div>
                                             </Link>
                                         )

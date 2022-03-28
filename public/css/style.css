@@ -3,6 +3,9 @@ body {
     width: 100vw;
     background-color: white;
 }
+a:link {
+    text-decoration: none;
+}
 /*HEADER*/
 header {
     width: 100vw;

@@ -5,6 +5,7 @@ import Header from './Header';
 import Movies from './Movies';
 import Session from './Session';
 import Seats from './Seats';
+import Success from './Success';
 
 function App() {
     return (
@@ -14,6 +15,7 @@ function App() {
                 <Route path="/" element={<Movies />} />
                 <Route path="/session/:idSession" element={<Session />} />
                 <Route path="/seats/:idSeats" element={<Seats />} />
+                <Route path="/success" element={<Success />} />
             </Routes>
         </BrowserRouter>
     );

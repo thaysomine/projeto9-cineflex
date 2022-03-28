@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import axios from 'axios';
 
 import UserData from './UserData';
@@ -30,7 +30,7 @@ export default function Seats() {
                 {seats.seats.map(({name, isAvailable, id})=> {
                     if(!isAvailable) {
                         return (
-                            <div className="seat yellow" key={id} onClick={() => alert("Esse assento não está disponível")}>{name}</div>
+                            <div className="seat yellow" key={id} onClick={() => alert("Esse assento não está disponível")}>{name<10 ? 0+name : name}</div>
                         )
                     } else {
                         return (
@@ -39,7 +39,7 @@ export default function Seats() {
                                     let removeId = seatList.filter(e => e !== id)
                                     return removeId
                                 }) : setSeatList([...seatList, id])
-                            }}>{name}</div>
+                            }}>{name<10 ? 0+name : name}</div>
                         )
                     }
                 })}
@@ -58,8 +58,7 @@ export default function Seats() {
                     <p>Indisponível</p>
                 </div>
             </div>
-            <UserData />
-            <p className='book-seat'>Reservar assento(s)</p>
+            <UserData seatList={seatList} seats={seats}/>
             <Footer poster={movie.posterURL} title={movie.title} day={day.weekday} time={name}/>
         </>
         : <p>carregando</p>
